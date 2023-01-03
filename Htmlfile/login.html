@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            height: 100%;
+            width: 100%;
+
+            /* background-color: rgb(156, 48, 48); */
+            /* background-image: linear-gradient(rgba(183, 8, 8, 0.4)) , url(fifi.jpg); */
+            background-image: url(fifi.jpg);
+            background-size: cover;
+            position: absolute;
+            background-position: center;
+
+        }
+
+        .form-box {
+            width: 400px;
+            height: 500px;
+            position: relative;
+            margin: 9% auto;
+            background: #fff;
+            padding: 5px;
+            overflow: hidden;
+
+        }
+
+        .buttonbox {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px rgb(230, 161, 161);
+            border-radius: 30px;
+        }
+
+        .togglebtn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+
+        #btn {
+            top: 0;
+            left: 0;
+            width: 110px;
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border-radius: 30px;
+            transition: 0.5s;
+        }
+
+        .input-group {
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: ease;
+
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+
+        }
+        .submit{ width: 95%; border: 0px; padding: 10px 20px; 
+        cursor: pointer; display: block; margin: auto;
+        background: linear-gradient(to right, #ff105f, #ffad06);
+       border-radius: 40px; }
+
+       .checkbox{
+        margin: 30px  10px 30px 0;
+
+       }
+       span{color: rgb(149, 122, 122); font-size: 15px;}
+
+       #login{left: 50px;}
+       #register {left: 450px;}
+       </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="form-box">
+            <div class="buttonbox">
+                <div id="btn"> </div>
+                <button type="submit" class="togglebtn" onclick="login()"> Log-In</button>
+                <button type="submit" class="togglebtn" onclick="register()"> Register</button>
+            </div>
+            <form class="input-group" id ="login">
+                <input type="text" class="input-field" placeholder="userid">
+                <input type="text" class="input-field" placeholder="userpass">
+                <input type="checkbox" class="checkbox" ><span>  Remember password</span>
+                <button type="submit" class="submit">Login</button>
+                <!-- <button type="reset" class="submit">reset</button> -->
+
+            </form>
+       <!-- Registration form -->
+       <form class="input-group" id="register">
+        <input type="text" class="input-field" placeholder="userid">
+        <input type="text" class="input-field" placeholder="Emailid">
+        <input type="text" class="input-field" placeholder="userpass">
+        <input type="text" class="input-field" placeholder="Confirmpass">
+        <input type="checkbox" class="checkbox" ><span>  Term and condtion</span>
+        <button type="submit" class="submit">Register</button>
+       </form>
+        </div>
+
+    </div>
+
+    </div>
+
+<script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register() {
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+    }
+
+    function login() {
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+
+</script>
+
+</body>
+
+</html>
